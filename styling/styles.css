@@ -404,7 +404,7 @@ nav .nav-menu .active {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  gap: 50px;
+  gap: 25px;
 }
 .logo {
   width: 125px;
