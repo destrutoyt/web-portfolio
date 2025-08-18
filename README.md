@@ -1,27 +1,37 @@
-# My Portfolio (V8.2 - Projects + "About Me" Section Update)
+# 🌐 My Portfolio (V8.2 - Projects + "About Me" Section Update)
 
-Welcome!  
-You’ve reached the repository for my personal developer portfolio. While there’s still more I plan to add, here are some key features that are already live:
+Welcome to the repository for my personal developer portfolio!  
+While it's a work in progress, several key features are already live and polished.
 
-## Features
-- Animated & interactive user interface
-- Dedicated “About Me” page with detailed background
-- Interactive project showcase with real-time links
-- Enhanced contact form with validation
-- Extended responsive design across all screen sizes
-- Minimalist, modern, and clean aesthetic
-- Well-structured codebase using semantic HTML, scoped styles, and clear comments
+---
 
-## Known Issues
-Although I thoroughly test the website before deploying updates, some issues may only surface in production.
+## 🚀 Features
 
-As of **6/17/2025**, the following issues are known:
-- `typewriter-effect` introduces horizontal overflow on smaller screens during animation.
+- 🎨 **Animated & Interactive UI** – Smooth, modern animations enhance user engagement.  
+- 👤 **About Me Page** – A dedicated section sharing my background and journey.  
+- 🧩 **Project Showcase** – Explore my work through interactive tiles with real-time links.  
+- 📬 **Contact Form** – Validated form for seamless communication.  
+- 📱 **Fully Responsive** – Optimized across all screen sizes and devices.  
+- 🧼 **Clean & Minimalist Design** – Aesthetic and accessible interface.  
+- 🧱 **Well-Structured Codebase** – Semantic HTML, scoped styles, and clear, maintainable comments.
 
-I aim to improve the portfolio **monthly**, including fixing bugs, adding features, and optimizing performance.
+---
 
-## Bug Tracking
+## 🐞 Known Issues *(as of 6/17/2025*
 
-All portfolio-related issues and tasks are tracked using **JIRA** to ensure structured development and continuous improvement.  
-While my JIRA board is currently private, it reflects an organized Agile workflow with sprint planning, issue prioritization, and backlog management.
+Despite thorough testing, a few issues persist in production:
 
+- ⚠️ **Horizontal Overflow** – The `typewriter-effect` animation can cause overflow on small screens.  
+
+> 🛠️ Updates and improvements are made monthly: bug fixes, performance optimizations, and new features.
+
+---
+
+## 📋 Bug Tracking & Workflow
+
+All issues and tasks are tracked via **JIRA** for a structured development process:
+
+- Tasks prioritized for impact and urgency  
+- Continuous improvement through regular reviews  
+
+> 🔒 *Note: The JIRA board is private, but it mirrors a professional agile workflow.*
