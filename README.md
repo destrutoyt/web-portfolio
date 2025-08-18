@@ -1,4 +1,4 @@
-# 🌐 My Portfolio
+# 🌐 My Portfolio (V8.2 - Projects + "About Me" Section Update)
 
 Welcome to the repository for my personal developer portfolio!  
 While it's a work in progress, several key features are already live and polished.
@@ -17,12 +17,11 @@ While it's a work in progress, several key features are already live and polishe
 
 ---
 
-## 🐞 Known Issues *(as of 3/12/2025)*
+## 🐞 Known Issues *(as of 6/17/2025*
 
 Despite thorough testing, a few issues persist in production:
 
 - ⚠️ **Horizontal Overflow** – The `typewriter-effect` animation can cause overflow on small screens.  
-- 🖼️ **Image Scaling** – Some images stretch or shrink beyond their native resolution. Fix in progress.
 
 > 🛠️ Updates and improvements are made monthly: bug fixes, performance optimizations, and new features.
 
