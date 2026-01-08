@@ -14,14 +14,13 @@
 }
 .heading-container .hover-text {
   font-family: 'Rubik', sans-serif;
-  font-size: 2rem;
   text-align: center;
   color: white;
   margin-top: 50px;
 }
 .hover-text span {
   display: inline-block;
-  color: white; /* fallback */
+  color: white;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 .hover-text:hover span {
@@ -119,6 +118,7 @@
 }
 .heading-description {
   margin-top: 15px;
+  margin-bottom: 30px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1.6;
@@ -133,7 +133,7 @@
     inset: 50px;
   }
   to {
-    inset: -10px;
+    inset: -5px;
   }
 }
 @keyframes switch-colors {
@@ -141,12 +141,12 @@
   100% { background-position: 100% 50%; }
 }
 
-@media (min-width: 320px) {
+@media (min-width: 10px) {
   .heading-image {
     height: 300px;
   }
   .heading-container .hover-text {
-    font-size: 1.52rem;
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 425px) {
@@ -154,7 +154,7 @@
     height: 400px;
   }
   .heading-container .hover-text {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 768px) {
