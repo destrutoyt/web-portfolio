@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "bootstrap-icons": "^1.11.3",
     "prettier": "^3.6.2"
   }
 }
