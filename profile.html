@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>MG | Profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styling/main.css">
+        <link rel="stylesheet" href="./styling/profile.css">
+        <script src="./functionality/profileButtons.js"></script>
+    </head>
+    <body>
+        <header class="fade-in">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="profile.html">Profile</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="profile-container fade-in">
+                <h2 style="color: white;">Miguel's Profile</h2>
+                <div class="menu-container">
+                    <button type="button" data-target="education">Education</button>
+                    <button type="button" data-target="certifications">Certifications</button>
+                    <button type="button" data-target="experience">Experience</button>
+                    <button type="button" data-target="skills">Skills</button>
+                </div>
+                <div class="content-container">
+                    <div class="content-item" data-section="education">
+                        <p>I started my academic journey with an Associate Degree in Information Technology.
+                            After getting my associates, I decided to take a more difficult path and transferred to WGU to pursue a Bachelor's Degree in Software Engineering.<br><br>
+                            Later on, I am planning on persuing a Master's Degree at Florida Interactive Entertainment Academy.</p>
+                        <ul class="edu-list">
+                            <li class="edu-item">
+                                <span class="edu-school">Western Governor's University</span>
+                                <span class="edu-degree">B.S. in Software Engineering</span>
+                                <span class="edu-dates">2024 – 2026</span>
+                            </li>
+
+                            <li class="edu-item">
+                                <span class="edu-school">DeVry University</span>
+                                <span class="edu-degree">A.S. in Information Technology</span>
+                                <span class="edu-dates">2021 – 2023</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-item hidden" data-section="certifications">
+                        <p>My first certification was the CompTIA Project+ which helped me understand project management principles and best practices. <br><br>Now, I am aiming to get my AWS Certified Solutions Architect certification by February 1st.</p>
+                        <ul class="cert-list">
+                            <li class="cert-item">
+                                <img src="/images/aws.png" alt="AWS Certified Solutions Architect">
+                                <span class="cert-date">Expected Feb 2026</span>
+                            </li>
+
+                            <li class="cert-item">
+                                <img src="/images/comptia.png" alt="CompTIA Project+">
+                                <span class="cert-date">Issued 2024</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-item hidden" data-section="experience">
+                        <p>
+                            Independent Projects represents hands-on work building, testing, and deploying full-stack applications using modern web, cloud, and QA technologies. <br><br>
+                            This includes development across Angular, Spring Boot, databases, AWS infrastructure, CI/CD pipelines, and automated testing.
+                        </p>
+                        <ul class="exp-list">
+                            <li class="exp-item">
+                                <div class="exp-dot"></div>
+
+                                <div class="exp-content">
+                                    <div class="exp-header">
+                                        <span class="exp-title">Full-Stack & Cloud Engineer</span>
+                                        <span class="exp-company">Independent Projects</span>
+                                        <span class="exp-date">2023 – Present</span>
+                                    </div>
+
+                                    <ul class="exp-bullets">
+                                        <li>Designed and delivered multiple full-stack applications across different domains, solving real problems such as user authentication, order processing, and data consistency</li>
+                                        <li>Architected and deployed cloud infrastructure on AWS to ensure high availability, scalability, and secure data access across services</li>
+                                        <li>Built automated testing and CI/CD pipelines to prevent regressions, validate APIs, and maintain production-level quality standards</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="exp-item">
+                                <div class="exp-dot"></div>
+
+                                <div class="exp-content">
+                                    <div class="exp-header">
+                                        <span class="exp-title">Learning Ambassador</span>
+                                        <span class="exp-company">Amazon</span>
+                                        <span class="exp-date">2021 – Present</span>
+                                    </div>
+
+                                    <ul class="exp-bullets">
+                                        <li>Led onboarding and technical training for new associates, ensuring accurate use of internal systems and digital tools</li>
+                                        <li>Identified workflow, system, and data issues and worked with leadership to resolve bottlenecks and prevent recurring errors</li>
+                                        <li>Served as a communication bridge between operations and management, improving process quality, reporting, and team performance</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                <div class="content-item hidden" data-section="skills">
+                    <p>These skills were developed through continuous self-learning, hands-on experimentation, and consistent dedication to building real systems. The technologies shown represent a core toolkit, but the ability to learn, adapt, and apply new tools extends far beyond what is listed here.</p>
+                    <div class="skills-wall">
+                        <!-- Row 1 — Front End -->
+                        <div class="skills-card">
+                            <div class="skills-head">
+                            <span class="skills-title">Front End</span>
+                            <span class="skills-sub">UI + styling</span>
+                            </div>
+
+                            <div class="skills-marquee" style="--dur: 22s;">
+                            <div class="skills-track">
+                                <span class="skill-pill"><img src="images/programming-icons/html.png" alt="HTML"><span>HTML</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/css.png" alt="CSS"><span>CSS</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/js.png" alt="JavaScript"><span>JavaScript</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/ts.png" alt="TypeScript"><span>TypeScript</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/bootstrap.png" alt="Bootstrap"><span>Bootstrap</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/angular.png" alt="Angular"><span>Angular</span></span>
+
+                                <!-- duplicate -->
+                                <span class="skill-pill"><img src="images/programming-icons/html.png" alt="HTML"><span>HTML</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/css.png" alt="CSS"><span>CSS</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/js.png" alt="JavaScript"><span>JavaScript</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/ts.png" alt="TypeScript"><span>TypeScript</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/bootstrap.png" alt="Bootstrap"><span>Bootstrap</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/angular.png" alt="Angular"><span>Angular</span></span>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 2 — Back End & Data -->
+                        <div class="skills-card skills-reverse">
+                            <div class="skills-head">
+                            <span class="skills-title">Back End & Data</span>
+                            <span class="skills-sub">services + databases</span>
+                            </div>
+
+                            <div class="skills-marquee" style="--dur: 26s;">
+                            <div class="skills-track">
+                                <span class="skill-pill"><img src="images/programming-icons/java.png" alt="Java"><span>Java</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/python.png" alt="Python"><span>Python</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/nodejs.png" alt="Node.js"><span>Node.js</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/mysql.png" alt="MySQL"><span>MySQL</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/postgresql.png" alt="PostgreSQL"><span>PostgreSQL</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/docker.png" alt="Docker"><span>Docker</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/spring.svg" alt="Spring Boot"><span>Spring Boot</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/aws.svg" alt="AWS"><span>AWS</span></span>
+
+                                <!-- duplicate -->
+                                <span class="skill-pill"><img src="images/programming-icons/java.png" alt="Java"><span>Java</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/python.png" alt="Python"><span>Python</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/nodejs.png" alt="Node.js"><span>Node.js</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/mysql.png" alt="MySQL"><span>MySQL</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/postgresql.png" alt="PostgreSQL"><span>PostgreSQL</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/docker.png" alt="Docker"><span>Docker</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/spring.svg" alt="Spring Boot"><span>Spring Boot</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/aws.svg" alt="AWS"><span>AWS</span></span>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 3 — QA & Testing -->
+                        <div class="skills-card">
+                            <div class="skills-head">
+                            <span class="skills-title">QA & Testing</span>
+                            <span class="skills-sub">automation + API</span>
+                            </div>
+
+                            <div class="skills-marquee" style="--dur: 18s;">
+                            <div class="skills-track">
+                                <span class="skill-pill"><img src="images/programming-icons/playwright.png" alt="Playwright"><span>Playwright</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/cypress.png" alt="Cypress"><span>Cypress</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/postman.png" alt="Postman"><span>Postman</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/json.png" alt="JSON"><span>JSON</span></span>
+
+                                <!-- duplicate -->
+                                <span class="skill-pill"><img src="images/programming-icons/playwright.png" alt="Playwright"><span>Playwright</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/cypress.png" alt="Cypress"><span>Cypress</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/postman.png" alt="Postman"><span>Postman</span></span>
+                                <span class="skill-pill"><img src="images/programming-icons/json.png" alt="JSON"><span>JSON</span></span>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ by Miguel Garces Lenis</p>
+            <div class="social-icons">
+                <a href="https://github.com/destrutoyt" target="_blank"><img src="/images/github-logo.svg" alt="GitHub Icon"></a>
+                <a href="https://www.linkedin.com/in/miguelgarcesl/" target="_blank"><img src="/images/linkedin-logo.svg" alt="LinkedIn Icon"></a>
+                <a href="https://leetcode.com/u/destrutoyt/" target="_blank"><img src="/images/leetcode-logo.svg" alt="LeetCode Profile"></a>
+            </div>
+        </footer>
+    </body>
+</html>
