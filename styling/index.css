@@ -127,7 +127,26 @@
   opacity: 0;
   animation: fade-in 1s ease forwards 2.5s;
 }
-
+.cta-button {
+  display: inline-block;
+  background-color: var(--peachy);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+  padding: 10px 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.2px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cta-button:hover {
+  background-color: darkorange;
+  transform: translateY(-2px);
+}
 @keyframes inset-out {
   from {
     inset: 50px;
