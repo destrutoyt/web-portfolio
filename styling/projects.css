@@ -24,7 +24,7 @@
   color: white;
 
   font-family: 'Rubik', sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.2px;
 
   padding: 0.7rem 1rem;
@@ -107,8 +107,8 @@
   border-radius: 18px; /* key change */
   padding: 1rem 1.1rem;
 
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(104, 236, 164, 0.18);
+  background: rgba(104, 236, 164, 0.192);
   backdrop-filter: blur(6px);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.14);
 
@@ -221,7 +221,7 @@
   border-radius: 999px;
 
   font-size: 0.78rem;
-  font-weight: 900;
+  font-weight: 650;
   letter-spacing: 0.2px;
 
   color: rgba(255, 255, 255, 0.94);
@@ -235,9 +235,8 @@
 }
 
 .tag:hover {
-  transform: translateY(-1px);
-  background: rgba(0, 0, 0, 0.22);
-  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(121, 233, 227, 0.479);
+  border-color: rgba(121, 233, 227, 0.18);
 }
 
 /* =========================
@@ -279,7 +278,7 @@
 
   text-decoration: none;
   font-family: 'Rubik', sans-serif;
-  font-weight: 900;
+  font-weight: 650;
   letter-spacing: 0.2px;
 
   color: white;
@@ -298,10 +297,8 @@
 }
 
 .icon-btn:hover {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  background: rgba(70, 252, 161, 0.445);
+  border-color: rgba(70, 252, 161, 0.2);
 }
 
 .icon-btn img {
@@ -309,4 +306,10 @@
   height: 20px;
   object-fit: contain;
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.18));
+}
+
+@media (min-width: 768px) {
+  .filter-button {
+    font-size: 0.95rem;
+  }
 }

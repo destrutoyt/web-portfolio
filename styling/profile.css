@@ -508,7 +508,7 @@ header {
 /* == RESPONSIVE DESIGN == */
 @media (min-width: 768px) {
   header {
-    padding-bottom: 1%;
+    padding-bottom: 7%;
   }
   .content-item p {
     font-size: 1.05rem;
@@ -534,7 +534,15 @@ header {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
+@media (min-width: 1024px) {
+  header {
+    padding-bottom: 5%;
+  }
+}
 @media (min-width: 1440px) {
+  header {
+    padding-bottom: 3%;
+  }
   .menu-container {
     gap: 20px;
   }
