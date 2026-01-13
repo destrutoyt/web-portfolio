@@ -1,0 +1,315 @@
+/* =========================
+   PROJECTS (MOBILE-FIRST)
+========================= */
+
+.project-container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1.2rem 1rem 2.2rem;
+}
+
+/* ===== Filters ===== */
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin: 0.8rem 0 1.2rem;
+}
+
+.filter-button {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.filter-button:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+}
+
+.filter-button.is-active {
+  background: var(--peachy);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== Grid ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile */
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+}
+
+/* =========================
+   WRAPPER ONLY (filtering fade)
+========================= */
+.project-card {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 260ms ease,
+    transform 260ms ease;
+}
+
+.project-card.is-entering {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.project-card.is-leaving {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.project-card.hidden {
+  display: none !important;
+}
+
+/* =========================
+   PILL (the actual interactive card)
+========================= */
+.project-head {
+  width: 100%;
+  max-width: 780px;
+  cursor: pointer;
+
+  /* pill look */
+  border-radius: 18px; /* key change */
+  padding: 1rem 1.1rem;
+
+  border: 1px solid rgba(104, 236, 164, 0.18);
+  background: rgba(104, 236, 164, 0.192);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.14);
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* hover */
+.project-head:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.26);
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+}
+
+/* keyboard focus */
+.project-head:focus {
+  outline: none;
+}
+.project-head:focus-visible {
+  box-shadow:
+    0 0 0 4px rgba(255, 255, 255, 0.16),
+    0 18px 44px rgba(0, 0, 0, 0.18);
+}
+
+/* Top row */
+.project-head-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.project-head-title {
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  line-height: 1.2;
+}
+
+.project-card.is-open .chev {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* =========================
+   DROPDOWN (desc + tags only)
+   Hidden until open
+========================= */
+.project-drop {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-6px);
+
+  transition:
+    max-height 360ms ease,
+    opacity 220ms ease,
+    transform 220ms ease;
+
+  /* no spacing when closed */
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0 solid transparent;
+}
+
+/* Open */
+.project-card.is-open .project-drop {
+  max-height: 520px;
+  opacity: 1;
+  transform: translateY(0);
+
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Description */
+.project-desc {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.92rem;
+  line-height: 1.75;
+  font-weight: 600;
+}
+.external-web-link {
+  color: var(--peachy);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-transform: none;
+}
+/* Tech tags */
+.skill-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0.9rem 0 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.tag {
+  padding: 0.38rem 0.65rem;
+  border-radius: 999px;
+
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.2px;
+
+  color: rgba(255, 255, 255, 0.94);
+  background: rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  transition:
+    transform 0.18s ease,
+    background-color 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.tag:hover {
+  background: rgba(121, 233, 227, 0.479);
+  border-color: rgba(121, 233, 227, 0.18);
+}
+
+/* =========================
+   ACTIONS (outside dropdown)
+   Hidden until open, but not inside dropdown
+========================= */
+.project-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+
+  /* hidden by default */
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-6px);
+
+  transition:
+    max-height 360ms ease,
+    opacity 220ms ease,
+    transform 220ms ease;
+
+  margin-top: 0;
+}
+
+/* show actions when open */
+.project-card.is-open .project-actions {
+  max-height: 120px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 1rem;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 650;
+  letter-spacing: 0.2px;
+
+  color: white;
+  padding: 0.8rem 0.9rem;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.icon-btn:hover {
+  background: rgba(70, 252, 161, 0.445);
+  border-color: rgba(70, 252, 161, 0.2);
+}
+
+.icon-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.18));
+}
+
+@media (min-width: 768px) {
+  .filter-button {
+    font-size: 0.95rem;
+  }
+}

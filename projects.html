@@ -2,125 +2,252 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Projects</title>
+    <title>MG | Projects</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./styling/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+    <link rel="stylesheet" href="./styling/main.css" />
+    <link rel="stylesheet" href="./styling/projects.css" />
+    <script src="/functionality/filter.js"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-
-        <label class="title animated-colors">Miguel GL</label>
-
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="details.html">About Me</a></li>
-          <li><a class="active" href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+    <header class="fade-in">
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a class="active" href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <div class="project-introduction">
-            <h1 style="color: white;">Projects</h1>
-            <p class="project-description-intro">Explore projects spanning QA testing to full-stack development, demonstrating practical skills and innovative solutions.</p>
-        </div>
-        <div class="project-parent-container">
-            <div class="project-child-container" id="project1"> <!-- QA Automated Project -->
-                <img class="project-image" src="images/project-images/qa-image.jpg" alt="QA Automated Project">
+   <main>
+        <section class="project-container" aria-label="Projects">
+            <h1 class="fade-in" style="color: white; text-align: center; margin-bottom: 30px;">Projects</h1>
 
-                <h2 class="project-title">QA Automated Project</h2>
-                <ul class="tags-list">
-                    <li class="tag">Playwright (TS)</li>
-                    <li class="tag">Docker</li>
-                    <li class="tag">GitHub Actions</li>
-                    <li class="tag">Postman</li>
-                </ul>
-                <p class="project-description">QA automation project showcasing UI, API, and visual tests for AutomationExercise. Integrated with Docker, Allure, and CI/CD pipelines.</p>
-
-                <div class="icons-container">
-                    <a href="https://github.com/destrutoyt/qa-automation-automationexercise" target="_blank"><img src="images/github-mark-white.png" class="github-img"></a>
-                </div>
+            <!-- Filters -->
+            <div class="filter-options" role="tablist" aria-label="Project filters">
+                <button class="filter-button is-active" data-filter="all" type="button">All</button>
+                <button class="filter-button" data-filter="web-development" type="button">Web Development</button>
+                <button class="filter-button" data-filter="qa-testing" type="button">QA & Testing</button>
             </div>
-            <div class="project-child-container" id="project2"> <!-- Taniti Island (Front End + Full Responsive) -->
-                <img class="project-image" src="images/project-images/taniti-image.jpg" alt="Taniti Island">
 
-                <h2 class="project-title">Taniti Island</h2>
-                <ul class="tags-list">
-                    <li class="tag">HTML</li>
-                    <li class="tag">CSS</li>
-                    <li class="tag">JavaScript</li>
-                    <li class="tag">Fully Responsive</li>
-                </ul>
-                <p class="project-description">A modern, mobile-friendly tourism site for the fictional island of Taniti. It features dining, reservations, and activities.</p>
-                <div class="icons-container">
-                    <a href="https://github.com/destrutoyt/taniti-website" target="_blank"><img src="images/github-mark-white.png" class="github-img"></a>
-                    <a href="https://destrutoyt.github.io/taniti-website/" target="_blank"><img src="images/web-logo.png" class="web-img"></a>
-                </div>
+            <!-- Grid -->
+            <div class="project-grid" id="projectGrid">
+
+            <!-- WEB project -->
+                <article class="project-card is-active" data-category="web-development">
+                    <div class="project-head" role="button" tabindex="0" aria-expanded="false">
+
+                        <div class="project-head-top">
+                            <span class="project-head-title">eCommerce Platform | Web</span>
+                            <span class="chev" aria-hidden="true">▾</span>
+                        </div>
+
+                        <!-- DROPDOWN content (desc + tags ONLY) -->
+                        <div class="project-drop" role="region" aria-label="Project details">
+                            <p class="project-desc">
+                            Full-stack e-commerce for prebuilt/custom PCs. Seller onboarding, product catalog, cart/checkout,
+                            order statuses, and AWS-ready deployment.
+                            </p>
+
+                            <ul class="skill-tags" aria-label="Tech stack">
+                            <li class="tag">Angular</li>
+                            <li class="tag">Spring Boot</li>
+                            <li class="tag">MySQL</li>
+                            <li class="tag">AWS</li>
+                            <li class="tag">CI/CD</li>
+                            </ul>
+                        </div>
+
+                        <!-- ACTIONS OUTSIDE dropdown (easier access) -->
+                        <div class="project-actions" aria-label="Project links">
+                            <a class="icon-btn" href="" target="_blank" rel="noopener">
+                            <img src="/images/github-logo.svg" alt="" />
+                            <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card is-active" data-category="web-development">
+                    <div class="project-head" role="button" tabindex="0" aria-expanded="false">
+
+                        <div class="project-head-top">
+                            <span class="project-head-title">Spring Inventory Management | Web</span>
+                            <span class="chev" aria-hidden="true">▾</span>
+                        </div>
+
+                        <!-- DROPDOWN content (desc + tags ONLY) -->
+                        <div class="project-drop" role="region" aria-label="Project details">
+                            <p class="project-desc">
+                                A Spring Boot web application that allows users to manage inventory for a bike shop.
+                                It includes functionality for managing in-house parts, outsourced parts, and products, along with custom validation rules and a responsive UI.
+                            </p>
+
+                            <ul class="skill-tags" aria-label="Tech stack">
+                            <li class="tag">Spring Boot</li>
+                            <li class="tag">MySQL</li>
+                            <li class="tag">Data Management</li>
+                            <li class="tag">Unit Testing</li>
+                            <li class="tag">REST API</li>
+                            </ul>
+                        </div>
+
+                        <!-- ACTIONS OUTSIDE dropdown (easier access) -->
+                        <div class="project-actions" aria-label="Project links">
+                            <a class="icon-btn" href="https://github.com/destrutoyt/spring-inventory-app" target="_blank" rel="noopener">
+                            <img src="/images/github-logo.svg" alt="" />
+                            <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card is-active" data-category="qa-testing">
+                    <div class="project-head" role="button" tabindex="0" aria-expanded="false">
+
+                        <div class="project-head-top">
+                            <span class="project-head-title">Automated QA Suite | QA</span>
+                            <span class="chev" aria-hidden="true">▾</span>
+                        </div>
+
+                        <!-- DROPDOWN content (desc + tags ONLY) -->
+                        <div class="project-drop" role="region" aria-label="Project details">
+                            <p class="project-desc">
+                                This project performs end-to-end testing on the demo website <a class="external-web-link" href="https://automationexercise.com" target="_blank" rel="noopener">Automation Exercise</a>. 
+                                It extensively covers major user flows, including login/registration, product filtering, checkout, and API functionality.
+                            </p>
+
+                            <ul class="skill-tags" aria-label="Tech stack">
+                            <li class="tag">Playwright (TS)</li>
+                            <li class="tag">GitHub Actions</li>
+                            <li class="tag">Docker</li>
+                            <li class="tag">Postman</li>
+                            <li class="tag">Allure Reporting</li>
+                            </ul>
+                        </div>
+
+                        <!-- ACTIONS OUTSIDE dropdown (easier access) -->
+                        <div class="project-actions" aria-label="Project links">
+                            <a class="icon-btn" href="https://github.com/destrutoyt/playwright-qa-project-automationexercise" target="_blank" rel="noopener">
+                            <img src="/images/github-logo.svg" alt="" />
+                            <span>GitHub</span>
+                            </a>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card is-active" data-category="web-development">
+                    <div class="project-head" role="button" tabindex="0" aria-expanded="false">
+
+                        <div class="project-head-top">
+                            <span class="project-head-title">Interactive World Map | Web</span>
+                            <span class="chev" aria-hidden="true">▾</span>
+                        </div>
+
+                        <!-- DROPDOWN content (desc + tags ONLY) -->
+                        <div class="project-drop" role="region" aria-label="Project details">
+                            <p class="project-desc">
+                                An Angular-based app that fetches real-time country data from the World Bank API. Explore stats like population by clicking on any country.
+                            </p>
+
+                            <ul class="skill-tags" aria-label="Tech stack">
+                            <li class="tag">Angular</li>
+                            <li class="tag">REST API</li>
+                            <li class="tag">TypeScript</li>
+                            <li class="tag">RxJS</li>
+                            <li class="tag">Dependency Injection</li>
+                            </ul>
+                        </div>
+
+                        <!-- ACTIONS OUTSIDE dropdown (easier access) -->
+                        <div class="project-actions" aria-label="Project links">
+                            <a class="icon-btn" href="https://github.com/destrutoyt/Interactive-World-Map" target="_blank" rel="noopener">
+                            <img src="/images/github-logo.svg" alt="" />
+                            <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card is-active" data-category="qa-testing">
+                    <div class="project-head" role="button" tabindex="0" aria-expanded="false">
+
+                        <div class="project-head-top">
+                            <span class="project-head-title">Cypress API Testing | QA</span>
+                            <span class="chev" aria-hidden="true">▾</span>
+                        </div>
+
+                        <!-- DROPDOWN content (desc + tags ONLY) -->
+                        <div class="project-drop" role="region" aria-label="Project details">
+                            <p class="project-desc">
+                                A comprehensive Cypress-based automated API testing suite for the Conduit (RealWorld) API 
+                                that includes request interception, response validation, error handling, and uses Docker for consistent, containerized execution suited for CI/CD pipelines, 
+                                showcasing my back-end testing skills alongside full-stack development.
+                            </p>
+                            <ul class="skill-tags" aria-label="Tech stack">
+                            <li class="tag">Cypress</li>
+                            <li class="tag">API Testing</li>
+                            <li class="tag">Docker</li>
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">REST API</li>
+                            </ul>
+                        </div>
+
+                        <!-- ACTIONS OUTSIDE dropdown (easier access) -->
+                        <div class="project-actions" aria-label="Project links">
+                            <a class="icon-btn" href="https://github.com/destrutoyt/Cypress-API-Testing" target="_blank" rel="noopener">
+                            <img src="/images/github-logo.svg" alt="" />
+                            <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                                <article class="project-card is-active" data-category="web-development">
+                    <div class="project-head" role="button" tabindex="0" aria-expanded="false">
+
+                        <div class="project-head-top">
+                            <span class="project-head-title">Taniti Tourism Website | Web</span>
+                            <span class="chev" aria-hidden="true">▾</span>
+                        </div>
+
+                        <!-- DROPDOWN content (desc + tags ONLY) -->
+                        <div class="project-drop" role="region" aria-label="Project details">
+                            <p class="project-desc">
+                                A modern, mobile-friendly tourism site for the fictional island of Taniti. 
+                                Includes detailed sections on accommodations, dining, and activities. Built with responsive HTML & CSS.
+                            </p>
+
+                            <ul class="skill-tags" aria-label="Tech stack">
+                            <li class="tag">HTML</li>
+                            <li class="tag">CSS</li>
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">Responsive Design</li>
+                            <li class="tag">Basic Animations</li>
+                            </ul>
+                        </div>
+
+                        <!-- ACTIONS OUTSIDE dropdown (easier access) -->
+                        <div class="project-actions" aria-label="Project links">
+                            <a class="icon-btn" href="https://github.com/yourname/pc-market" target="_blank" rel="noopener">
+                            <img src="/images/github-logo.svg" alt="" />
+                            <span>GitHub</span>
+                            </a>
+
+                            <a class="icon-btn" href="https://destrutoyt.github.io/taniti-website/" target="_blank" rel="noopener">
+                            <img src="/images/live-web.svg" alt="" />
+                            <span>Live</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
             </div>
-            <div class="project-child-container" id="project3"> <!-- Interactive World Map (Angular + API) -->
-                <img class="project-image" src="images/project-images/world-map-image.jpg" alt="Interactive World Map">
-
-                <h2 class="project-title">Interactive World Map</h2>
-                <ul class="tags-list">
-                    <li class="tag">AngularJS</li>
-                    <li class="tag">API</li>
-                    <li class="tag">Data Manipulation</li>
-                    <li class="tag">Lazy Loading / Routing</li>
-                </ul>
-                <p class="project-description">An Angular-based app that fetches real-time country data from the World Bank API. Explore stats like population by clicking on any country.</p>
-                <div class="icons-container">
-                    <a href="https://github.com/destrutoyt/interactive-world-map" target="_blank"><img src="images/github-mark-white.png" class="github-img"></a>
-                </div>
-            </div>
-            <div class="project-child-container" id="project4"> <!-- Paradigm Pet Professionals (Front End) -->
-                <img class="project-image" src="images/project-images/pets-image.jpg" alt="Paradigm Pet Professionals">
-
-                <h2 class="project-title">Paradigm Pet Professionals</h2>
-                <ul class="tags-list">
-                    <li class="tag">HTML</li>
-                    <li class="tag">CSS</li>
-                    <li class="tag">JavaScript</li>
-                </ul>
-                <p class="project-description">Multi-page responsive site that educates pet owners about caring for dogs, cats, and exotic animals. Built with semantic HTML5 and modern CSS practices.</p>
-                <div class="icons-container">
-                    <a href="https://github.com/destrutoyt/front-end-project" target="_blank"><img src="images/github-mark-white.png" class="github-img"></a>
-                    <a href="https://destrutoyt.github.io/front-end-project/" target="_blank"><img src="images/web-logo.png" class="web-img"></a>
-                </div>
-            </div>
-            <div class="project-child-container" id="project5"> <!-- Weather App (Python) -->
-                <img class="project-image" src="images/project-images/weather-image.jpg" alt="Weather App">
-
-                <h2 class="project-title">Weather App (Discontinued)</h2>
-                <ul class="tags-list">
-                    <li class="tag">Python</li>
-                    <li class="tag">API</li>
-                    <li class="tag">GUI</li>
-                    <li class="tag">Data Manipulation</li>
-                </ul>
-                <p class="project-description">An interactive weather app showing real-time data (temperature, wind, etc.) from specific locations. Displays dynamic conditions using a public API.</p>
-                <div class="icons-container">
-                    <a href="https://github.com/destrutoyt/python_weather_app" target="_blank"><img src="images/github-mark-white.png" class="github-img"></a>
-                </div>
-            </div>
-        </div>
-
+        </section>
     </main>
 
-    <script rel="script" src="./functionality/slider.js"></script>
+    <footer>
+        <p>Made with ❤️ by Miguel Garces Lenis</p>
+        <div class="social-icons">
+            <a href="https://github.com/destrutoyt" target="_blank"><img src="/images/github-logo.svg" alt="GitHub Icon"></a>
+            <a href="https://www.linkedin.com/in/miguelgarcesl/" target="_blank"><img src="/images/linkedin-logo.svg" alt="LinkedIn Icon"></a>
+            <a href="https://leetcode.com/u/destrutoyt/" target="_blank"><img src="/images/leetcode-logo.svg" alt="LeetCode Profile"></a>
+        </div>
+    </footer>
   </body>
 </html>
