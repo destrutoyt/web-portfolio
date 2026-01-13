@@ -19,7 +19,7 @@ Welcome to the repository for my personal developer portfolio!
 ## 🐞 Known Issues *(as of 1/12/2026*)
 
 ![Days since last bug](images/others/meme.jpg)
-> 🛠️ Updates and improvements are made monthly: bug fixes, performance optimizations, and new features.
+> 🛠️ Updates and improvements are made gradually :D!
 
 ---
 
